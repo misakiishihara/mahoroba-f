@@ -18,17 +18,19 @@ export default function Topbar() {
              />
             </div>
         </div>
-        <div className="topberRight">
+        <div className="topbarRight">
+           <div className='topbarItemIcons'>
             <div className="topbarIconItem">
                 <Chat />
                 <span className='topbarIconBadge'>1</span>
             </div>
-        </div>
             <div className="topbarIconItem">
                 <Notifications />
                 <span className='topbarIconBadge'>2</span>
             </div>
             <img src="/assets/person/1.jpeg" alt="" className='iconImage' />
+        </div> 
+        </div>
     </div>
   )
 }
