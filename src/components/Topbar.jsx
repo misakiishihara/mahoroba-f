@@ -1,28 +1,34 @@
 import React from 'react'
+import { Chat, Notifications, Search } from "@mui/icons-material"
+import "./Topbar.css"
 
 export default function Topbar() {
   return (
     <div className='topbarContainer'>
         <div className="topbarLeft">
-            <span className='logo'>Mahoroba</span>
+            <span className="logo">Mahoroba</span>
         </div>
         <div className="topbarCenter">
             <div className="searchBar">
+                <Search className="searchIcon" />
                 <input 
                 type="text" 
-                className='searchInput'
-                placeholder='search' />
+                className="searchInput"
+                placeholder="search"
+             />
             </div>
+        </div>
         <div className="topberRight">
             <div className="topbarIconItem">
-                1
+                <Chat />
+                <span className='topbarIconBadge'>1</span>
             </div>
+        </div>
             <div className="topbarIconItem">
-                2
+                <Notifications />
+                <span className='topbarIconBadge'>2</span>
             </div>
-            <img src="/assets/person/1.jpeg" alt="" className='iconImage'/>
-        </div>
-        </div>
+            <img src="/assets/person/1.jpeg" alt="" className='iconImage' />
     </div>
   )
 }
