@@ -15,7 +15,7 @@ export default function Share() {
             <div className='shareButtons'>
                 <div className="shareOptions">
                     <div className="shareOption">
-                        <Image className='shareIcon'/>
+                        <Image className='shareIcon' htmlColor='blue'/>
                         <span className='shareOptionText'>Image</span>
                     </div>
                     <div className="shareOption">
@@ -23,11 +23,11 @@ export default function Share() {
                         <span className='shareOptionText'>GIF</span>
                     </div>
                     <div className="shareOption">
-                        <Face className='shareIcon'/>
-                        <span className='shareOptionText'>Feeling</span>
+                        <Face className='shareIcon' htmlColor='hotPink'/>
+                        <span className='shareOptionText' >Feeling</span>
                     </div>
                     <div className="shareOption">
-                        <Analytics className='shareIcon'/>
+                        <Analytics className='shareIcon' htmlColor='red'/>
                         <span className='shareOptionText'>Vote</span>
                     </div>
                 </div>
