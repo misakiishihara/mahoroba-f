@@ -1,6 +1,6 @@
 import { Bookmark, Home, MessageRounded, Notifications, Person, Search, Settings } from '@mui/icons-material'
 import React from 'react'
-
+import './Sidebar.css'
 export default function Sidebar() {
   return (
     <div className='sidebar'>
@@ -34,6 +34,18 @@ export default function Sidebar() {
                     <Settings className='sidebarIcon'/>
                     <span className="sidebarListItemText">Settings</span>
                 </li>
+            </ul>
+            <hr className='sidebarHr' />
+            <ul className='sidebarFriendList'>
+                <li className='sidebarFriend'>
+                    <img src="/assets/person/2.jpeg" alt="" className='sidebarFriendImg'/>
+                    <span className="sidebarFriendName">sample1</span>
+                </li>
+                <li className='sidebarFriend'>
+                    <img src="/assets/person/2.jpeg" alt="" className='sidebarFriendImg'/>
+                    <span className="sidebarFriendName">sample2</span>
+                </li>
+                
             </ul>
         </div>
     </div>
