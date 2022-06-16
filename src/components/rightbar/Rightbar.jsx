@@ -3,9 +3,11 @@ import "./Rightbar.css"
 import { Users } from "../../dummyData"
 import Online from '../online/Online'
 
-export default function Rightbar() {
-  return (
-    <div className='rightbar'>
+export default function Rightbar({ profile }) {
+    
+    const HomeRightbar = () => {
+      return (
+        <div className='rightbar'>
       <div className="rightbarWrapper">
         <div className="eventContainer">
           <img src="assets/star.png" alt="" className='starImg' />
@@ -38,5 +40,16 @@ export default function Rightbar() {
          <p className='promotionName'>Shopping3</p>
       </div>
     </div>
-  )
-}
+    )
+    const ProfileRightbar = () => {
+      return (
+        <></>
+      )
+    }
+      }
+      return (
+        <div></div>
+      
+      
+      )
+};
