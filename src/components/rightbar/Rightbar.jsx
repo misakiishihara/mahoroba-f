@@ -3,16 +3,16 @@ import "./Rightbar.css"
 import { Users } from "../../dummyData"
 import Online from '../online/Online'
 
-export default function Rightbar({ profile }) {
-    
+export default function Rightbar({ user }) {
+    const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER;
     const HomeRightbar = () => {
       return (
       <>
         <div className="eventContainer">
-          <img src="assets/star.png" alt="" className='starImg' />
+          <img src={PUBLIC_FOLDER + "/star.png"} alt="" className='starImg' />
           <span className='eventText'><b>only followers event !</b></span>
         </div>
-        <img src="assets/ad.jpeg" alt="" className='eventImg' />
+        <img src={PUBLIC_FOLDER + "/ad.jpeg"} alt="" className='eventImg' />
         <h4 className='rightbarTitle'>friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((user) => (
@@ -21,18 +21,18 @@ export default function Rightbar({ profile }) {
         </ul>
         <p className='promotionTitle'>PR</p>
         <img 
-        src="assets/promotion/promotion1.jpeg" 
+        src={PUBLIC_FOLDER + "/promotion/promotion1.jpeg"} 
         alt="" 
         className='rightbarPromotionImg'
          />
          <p className='promotionName'>Shopping</p>
          <img 
-        src="assets/promotion/promotion2.jpeg" 
+        src={PUBLIC_FOLDER + "/promotion/promotion2.jpeg"} 
         alt="" 
         className='rightbarPromotionImg'
          />
          <p className='promotionName'>Shopping2</p><img 
-        src="assets/promotion/promotion3.jpeg" 
+        src={PUBLIC_FOLDER + "/promotion/promotion3.jpeg"} 
         alt="" 
         className='rightbarPromotionImg'
          />
@@ -41,7 +41,7 @@ export default function Rightbar({ profile }) {
     )
     }
 
-    const ProfileRightbar = () => {
+    const ProfileRightbar = ( ) => {
       return (
         <>
           <h4 className='rightbarTitle'>User Info</h4>
@@ -54,7 +54,7 @@ export default function Rightbar({ profile }) {
             <div className="rightbarFollowings">
               <div className="rightbarFollowing">
                 <img 
-                src="assets/person/1.jpeg"
+                src={PUBLIC_FOLDER + "/person/1.jpeg"}
                 alt="" 
                 className='rightbarFollowingImg'
                 />
@@ -62,7 +62,7 @@ export default function Rightbar({ profile }) {
               </div>
               <div className="rightbarFollowing">
                 <img 
-                src="assets/person/2.jpeg"
+                src={PUBLIC_FOLDER + "/person/2.jpeg"}
                 alt="" 
                 className='rightbarFollowingImg'
                 />
@@ -70,7 +70,7 @@ export default function Rightbar({ profile }) {
               </div>
               <div className="rightbarFollowing">
                 <img 
-                src="assets/person/3.jpeg"
+                src={PUBLIC_FOLDER + "/person/3.jpeg"}
                 alt="" 
                 className='rightbarFollowingImg'
                 />
@@ -78,7 +78,7 @@ export default function Rightbar({ profile }) {
               </div>
               <div className="rightbarFollowing">
                 <img 
-                src="assets/person/4.jpeg"
+                src={PUBLIC_FOLDER + "/person/4.jpeg"}
                 alt="" 
                 className='rightbarFollowingImg'
                 />
@@ -86,7 +86,7 @@ export default function Rightbar({ profile }) {
               </div>
               <div className="rightbarFollowing">
                 <img 
-                src="assets/person/5.jpeg"
+                src={PUBLIC_FOLDER + "/person/5.jpeg"}
                 alt="" 
                 className='rightbarFollowingImg'
                 />
@@ -101,7 +101,7 @@ export default function Rightbar({ profile }) {
       return (
         <div className='rightbar'>
           <div className="rightbarWrapper">
-            {profile ? <ProfileRightbar /> : <HomeRightbar />}
+            {user ? <ProfileRightbar /> : <HomeRightbar />}
           </div>
         </div>
       )

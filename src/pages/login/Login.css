@@ -94,3 +94,16 @@
     cursor: pointer;
 }
 
+.githubicon {
+    display: flex;
+    text-decoration: none;
+    color: rgb(39, 1, 255);
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.githubicon:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
