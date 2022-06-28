@@ -16,7 +16,7 @@ export default function Post({ post }) {
     const [user, setUser] = useState({});
 
     const {user: currentUser} = useContext(AuthContext)
-  useEffect(() => {
+    useEffect(() => {
     const fetchUser = async () => {
       const response = await axios.get(`/users?userId=${post.userId}`)
       // console.log(response);
@@ -57,7 +57,10 @@ export default function Post({ post }) {
                     <span className="postDate">{format(post.createdAt)}</span>
                 </div>
             <div className='postTopRight'> 
-                <MoreVert />
+                <form action="/:id" method='post'>
+                    <input type="hidden" name="id" value="" />
+                    <button type='submit' name='button'><MoreVert /></button>
+                </form>
             </div>
             </div>
             <div className="postCenter">
